@@ -1,10 +1,14 @@
-FROM python:alpine3.8
+FROM python:3.8
 LABEL  maintainer='andriykolomiec218@gmail.com'
 
-COPY . ./app
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
 
-RUN apk update && apk upgrade -y
+WORKDIR /app
+COPY . /app
+
+RUN apt-get update && apt-get upgrade -y
 RUN pip install -r requirements.txt
-RUN pyton manage.py migrate
+RUN python manage.py migrate
 
-CMD ["python", "manage.py", "runserver"]
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
