@@ -11,7 +11,4 @@ jobs:
         - uses: actions/checkout@3
         - name: 'Build Docker image'
           run: docker build . -t 'django_app:latest'
-
-
-      
-    
+          
