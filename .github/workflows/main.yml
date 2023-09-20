@@ -1,0 +1,17 @@
+name: "Build, test and deploy django_app"
+on:
+  push:
+    branches: ["master"]
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+
+    steps:
+        - uses: actions/checkout@3
+        - name: 'Build Docker image'
+          run: docker build . -t 'django_app:latest'
+
+
+      
+    
