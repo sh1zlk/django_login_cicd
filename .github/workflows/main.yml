@@ -42,7 +42,7 @@ jobs:
     runs-on: ubuntu-20.04
     needs: docker
     steps:
-        - uses: action/checkout@v2
+        - uses: actions/checkout@v3
         - uses: alex-ac/github-action-ssh-docker-compose@master
           name: "Docker-Compose delpoy"
           with:
