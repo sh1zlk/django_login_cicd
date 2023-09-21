@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  django_app:
+    image: sh1zik/django_app:latest
+    ports:
+      - "8000:80"
