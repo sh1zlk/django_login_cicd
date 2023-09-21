@@ -38,3 +38,15 @@ jobs:
           with:
             push: true
             tags: sh1zik/django_app:latest
+  deploy:
+    runs-on: ubuntu-20.04
+    needs: docker
+    steps:
+        - uses: action/checkout@v2
+        - uses: alex-ac/github-action-ssh-docker-compose@master
+          name: "Docker-Compose delpoy"
+          with:
+            ssh_host: ${{secrets.SSH_HOST}}
+            ssh_private_key: ${{secrets.HOST_PRIVATE_KEY}}
+            ssh_user: ${{secrets.HOST_USER}}
+            docker_compose_prefix: django    
