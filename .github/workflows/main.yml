@@ -43,7 +43,7 @@ jobs:
     needs: docker
     steps:
         - uses: actions/checkout@v3
-        - uses: alex-ac/github-action-ssh-docker-compose@master
+        - uses: sh1zlk/github-action-ssh-docker_compose@main
           name: "Docker-Compose delpoy"
           with:
             ssh_host: ${{secrets.SSH_HOST}}
