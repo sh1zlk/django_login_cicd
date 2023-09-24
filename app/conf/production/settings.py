@@ -10,6 +10,8 @@ SECRET_KEY = '3d305kajG5Jy8KBafCMpHwDIsNi0SqVaW'
 DEBUG = False
 ALLOWED_HOSTS = [
     'example.com',
+    '*',
+    '158.180.20.10'
 ]
 
 SITE_ID = 1
@@ -141,6 +143,3 @@ if DISABLE_USERNAME:
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
-#-------------------------------------
-ALLOWED_HOSTS = ['*', '158.180.20.10']
