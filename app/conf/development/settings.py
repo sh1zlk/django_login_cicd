@@ -137,3 +137,6 @@ LOCALE_PATHS = [
 ]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#-------------------------------------
+ALLOWED_HOSTS = ['*', '158.180.20.10']
