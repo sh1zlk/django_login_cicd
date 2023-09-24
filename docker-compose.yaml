@@ -5,5 +5,5 @@ services:
     container_name: 'django_web_app'
     image: sh1zik/django_app:latest
     ports:
-      - "0.0.0.0:8000:80"
+      - "0.0.0.0:8000:8000"
     restart: always
